@@ -11,7 +11,7 @@ This project is also described in detail [on Hackaday.io](https://hackaday.io/pr
 
 The left side of the PCB accepts 8V to 28V DC input. It then converts the input voltage to 12V and then to 5V.
 
-The output voltages are accessible on the right of the PCB, and can be used to power 12V or 5V fans or other devices.
+The output voltages are accessible on the right side of the PCB and can be used to power 12V or 5V fans or other devices.
 
 # PCB features
 
@@ -22,13 +22,33 @@ The output voltages are accessible on the right of the PCB, and can be used to p
   * Simple passive design draws 0mA current when no devices are connected
   * Thermal vias in strategic locations
 
-# BOM
+# BOM (through-hole)
 
-TODO
+| Quantity | Item and Description |
+| :----: | :---- |
+| 1 | XPPower VR10S05 SIP3 5V 500mA DC-DC switching regulator |
+| 1 | XPPower VR10S12 SIP3 12V 500mA DC-DC switching regulator |
+| 3 | 3-pin JST-XH male connectors |
+
+# BOM (surface mount)
+
+| Quantity | Item and Description |
+| :----: | :---- |
+| 1 | 10uF 50V Capacitor 5x5.3mm |
+| 2 | 22uF 16V Capacitors 5x5.3mm |
+| 1 | 40V 1A Diode SOD-123 |
+| 2 | 28V 1A Diode SOD-123 |
+| 1 | 33V 1.1A/2.2A Polyfuse 1812 |
 
 # Schematic
 
 The schematic is available [here](schematic-v1.pdf)
+
+# Notes
+
+This PCB was designed with [Kicad](https://kicad.org/) v5.1.9 from the `debian buster-backports` repository.
+
+I take no responsibility for any problems that may occur with your use of this PCB or design files. Create and use at your own risk.
 
 # License
 
