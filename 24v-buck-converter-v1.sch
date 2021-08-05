@@ -1,0 +1,448 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "μPow: 3D printer buck converter for 12V/5V fans"
+Date "2021-05-05"
+Rev "v.1"
+Comp "On-Prem"
+Comment1 "Author: aw"
+Comment2 "Url: https://github.com/aw/hw-24v-buck-converter.git"
+Comment3 "License: CC BY-NC-SA 4.0"
+Comment4 ""
+$EndDescr
+$Comp
+L Device:CP_Small C1
+U 1 1 60928AEE
+P 7800 4450
+F 0 "C1" H 7600 4450 50  0000 L CNN
+F 1 "10uF 50V" H 7400 4350 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 7800 4450 50  0001 C CNN
+F 3 "~" H 7800 4450 50  0001 C CNN
+F 4 "C249452" H 7800 4450 50  0001 C CNN "LCSC"
+	1    7800 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:R-78E12-0.5 U2
+U 1 1 6092A773
+P 9750 4300
+F 0 "U2" H 9750 4542 50  0000 C CNN
+F 1 "5V" H 9750 4451 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" H 9800 4050 50  0001 L CIN
+F 3 "https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf" H 9750 4300 50  0001 C CNN
+	1    9750 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C2
+U 1 1 6092B364
+P 7800 5800
+F 0 "C2" H 7900 5850 50  0000 L CNN
+F 1 "22uF 16V" H 7900 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 7800 5800 50  0001 C CNN
+F 3 "~" H 7800 5800 50  0001 C CNN
+F 4 "C249477" H 7800 5800 50  0001 C CNN "LCSC"
+	1    7800 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 609367B3
+P 7150 5750
+F 0 "J2" H 7230 5742 50  0000 L CNN
+F 1 "Conn_01x02" H 7230 5651 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 7150 5750 50  0001 C CNN
+F 3 "~" H 7150 5750 50  0001 C CNN
+	1    7150 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 60956C06
+P 3500 4300
+F 0 "D1" H 3500 4050 50  0000 C CNN
+F 1 "40V 1A Diode" H 3500 4150 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 3500 4300 50  0001 C CNN
+F 3 "~" H 3500 4300 50  0001 C CNN
+F 4 "C8598" H 3500 4300 50  0001 C CNN "LCSC"
+	1    3500 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 60959E17
+P 3950 4300
+F 0 "F1" V 3700 4200 50  0000 C CNN
+F 1 "Polyfuse 33V 1.1A/2.2A" V 3800 4650 50  0000 C CNN
+F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 4000 4100 50  0001 L CNN
+F 3 "~" H 3950 4300 50  0001 C CNN
+F 4 "C369173" H 3950 4300 50  0001 C CNN "LCSC"
+	1    3950 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 4300 3800 4300
+Text GLabel 10050 4300 2    50   Input ~ 0
+5V_OUT
+Text GLabel 8450 4300 2    50   Input ~ 0
+12V_OUT
+Text GLabel 9250 4300 0    50   Input ~ 0
+12V_OUT
+Text GLabel 8050 5650 2    50   Input ~ 0
+12V_OUT
+Wire Wire Line
+	9250 4300 9450 4300
+$Comp
+L Device:D_Schottky D2
+U 1 1 609A987A
+P 7500 5650
+F 0 "D2" H 7450 5850 50  0000 C CNN
+F 1 "28V 1A Diode" H 7650 5750 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 7500 5650 50  0001 C CNN
+F 3 "~" H 7500 5650 50  0001 C CNN
+F 4 "C8598" H 7500 5650 50  0001 C CNN "LCSC"
+	1    7500 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 609832BB
+P 8850 4700
+F 0 "#PWR04" H 8850 4450 50  0001 C CNN
+F 1 "GND" H 8855 4527 50  0000 C CNN
+F 2 "" H 8850 4700 50  0001 C CNN
+F 3 "" H 8850 4700 50  0001 C CNN
+	1    8850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 4700 8850 4600
+Wire Wire Line
+	8850 4600 9750 4600
+Connection ~ 8850 4600
+Wire Wire Line
+	8150 4600 8850 4600
+$Comp
+L power:GND #PWR05
+U 1 1 6093B690
+P 7500 5900
+F 0 "#PWR05" H 7500 5650 50  0001 C CNN
+F 1 "GND" H 7505 5727 50  0000 C CNN
+F 2 "" H 7500 5900 50  0001 C CNN
+F 3 "" H 7500 5900 50  0001 C CNN
+	1    7500 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:R-78E12-0.5 U1
+U 1 1 60929509
+P 8150 4300
+F 0 "U1" H 8150 4542 50  0000 C CNN
+F 1 "12V" H 8150 4451 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" H 8200 4050 50  0001 L CIN
+F 3 "https://www.recom-power.com/pdf/Innoline/R-78Exx-0.5.pdf" H 8150 4300 50  0001 C CNN
+	1    8150 4300
+	1    0    0    -1  
+$EndComp
+Text GLabel 4100 4300 2    50   Input ~ 0
+FUSE
+Text GLabel 7150 4300 0    50   Input ~ 0
+FUSE
+Text GLabel 3350 4300 0    50   Input ~ 0
+VIN
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 60A16DF4
+P 7650 4200
+F 0 "#FLG0101" H 7650 4275 50  0001 C CNN
+F 1 "PWR_FLAG" H 7650 4373 50  0000 C CNN
+F 2 "" H 7650 4200 50  0001 C CNN
+F 3 "~" H 7650 4200 50  0001 C CNN
+	1    7650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 609277C1
+P 7300 4200
+F 0 "#PWR01" H 7300 4050 50  0001 C CNN
+F 1 "VCC" H 7315 4373 50  0000 C CNN
+F 2 "" H 7300 4200 50  0001 C CNN
+F 3 "" H 7300 4200 50  0001 C CNN
+	1    7300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 4300 7300 4300
+Wire Wire Line
+	8150 4600 7800 4600
+Wire Wire Line
+	7800 4600 7800 4550
+Connection ~ 8150 4600
+Wire Wire Line
+	7800 4350 7800 4300
+Connection ~ 7800 4300
+Wire Wire Line
+	7800 4300 7850 4300
+Wire Wire Line
+	7650 4200 7650 4300
+Connection ~ 7650 4300
+Wire Wire Line
+	7650 4300 7800 4300
+Wire Wire Line
+	7300 4200 7300 4300
+Connection ~ 7300 4300
+Wire Wire Line
+	7300 4300 7650 4300
+Wire Wire Line
+	7500 5750 7350 5750
+Wire Wire Line
+	7500 5900 7500 5750
+Wire Wire Line
+	7800 5900 7500 5900
+Connection ~ 7500 5900
+Wire Wire Line
+	7800 5700 7800 5650
+Wire Wire Line
+	7800 5650 7650 5650
+Wire Wire Line
+	8050 5650 7800 5650
+Connection ~ 7800 5650
+Wire Wire Line
+	10350 5650 10100 5650
+Wire Wire Line
+	10100 5650 9950 5650
+Connection ~ 10100 5650
+Wire Wire Line
+	10100 5700 10100 5650
+$Comp
+L Device:CP_Small C3
+U 1 1 60A3BA80
+P 10100 5800
+F 0 "C3" H 10200 5850 50  0000 L CNN
+F 1 "22uF 16V" H 10200 5750 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 10100 5800 50  0001 C CNN
+F 3 "~" H 10100 5800 50  0001 C CNN
+F 4 "C249477" H 10100 5800 50  0001 C CNN "LCSC"
+	1    10100 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 5750 9650 5750
+Connection ~ 9800 5900
+Wire Wire Line
+	10100 5900 9800 5900
+$Comp
+L power:GND #PWR0101
+U 1 1 60A3BA94
+P 9800 5900
+F 0 "#PWR0101" H 9800 5650 50  0001 C CNN
+F 1 "GND" H 9805 5727 50  0000 C CNN
+F 2 "" H 9800 5900 50  0001 C CNN
+F 3 "" H 9800 5900 50  0001 C CNN
+	1    9800 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 5900 9800 5750
+$Comp
+L Device:D_Schottky D3
+U 1 1 60A3BA8E
+P 9800 5650
+F 0 "D3" H 9750 5850 50  0000 C CNN
+F 1 "28V 1A Diode" H 9950 5750 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 9800 5650 50  0001 C CNN
+F 3 "~" H 9800 5650 50  0001 C CNN
+F 4 "C8598" H 9800 5650 50  0001 C CNN "LCSC"
+	1    9800 5650
+	1    0    0    -1  
+$EndComp
+Text GLabel 10350 5650 2    50   Input ~ 0
+5V_OUT
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 60A3BA86
+P 9450 5750
+F 0 "J3" H 9530 5742 50  0000 L CNN
+F 1 "Conn_01x02" H 9530 5651 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 9450 5750 50  0001 C CNN
+F 3 "~" H 9450 5750 50  0001 C CNN
+	1    9450 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 60A76CCC
+P 3550 5000
+F 0 "H1" V 3504 5150 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3595 5150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 3550 5000 50  0001 C CNN
+F 3 "~" H 3550 5000 50  0001 C CNN
+	1    3550 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 60A77523
+P 3550 5250
+F 0 "H2" V 3504 5400 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3595 5400 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 3550 5250 50  0001 C CNN
+F 3 "~" H 3550 5250 50  0001 C CNN
+	1    3550 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60A777FE
+P 3300 5850
+F 0 "#PWR0102" H 3300 5600 50  0001 C CNN
+F 1 "GND" H 3305 5677 50  0000 C CNN
+F 2 "" H 3300 5850 50  0001 C CNN
+F 3 "" H 3300 5850 50  0001 C CNN
+	1    3300 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5000 3300 5000
+Wire Wire Line
+	3300 5000 3300 5250
+Wire Wire Line
+	3450 5250 3300 5250
+Connection ~ 3300 5250
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 60AECA8E
+P 3550 5500
+F 0 "H3" V 3504 5650 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3595 5650 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 3550 5500 50  0001 C CNN
+F 3 "~" H 3550 5500 50  0001 C CNN
+	1    3550 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 60AECF80
+P 3550 5750
+F 0 "H4" V 3504 5900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3595 5900 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 3550 5750 50  0001 C CNN
+F 3 "~" H 3550 5750 50  0001 C CNN
+	1    3550 5750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 5250 3300 5500
+Wire Wire Line
+	3450 5500 3300 5500
+Connection ~ 3300 5500
+Wire Wire Line
+	3300 5500 3300 5750
+Wire Wire Line
+	3450 5750 3300 5750
+Connection ~ 3300 5750
+Wire Wire Line
+	3300 5750 3300 5850
+Wire Notes Line
+	3100 4850 3100 6150
+Wire Notes Line
+	3100 6150 4500 6150
+Wire Notes Line
+	4500 6150 4500 4850
+Wire Notes Line
+	4500 4850 3100 4850
+Text Notes 3100 4800 0    50   ~ 0
+Mounting Holes
+Wire Notes Line
+	3100 3900 3100 4450
+Wire Notes Line
+	3100 4450 4800 4450
+Wire Notes Line
+	4800 4450 4800 3900
+Wire Notes Line
+	4800 3900 3100 3900
+Wire Notes Line
+	6800 3900 6800 4950
+Wire Notes Line
+	6800 4950 10500 4950
+Wire Notes Line
+	10500 4950 10500 3900
+Wire Notes Line
+	10500 3900 6800 3900
+Text Notes 6800 3850 0    50   ~ 0
+Voltage Regulators
+Text Notes 3100 3850 0    50   ~ 0
+Input Protection
+Wire Notes Line
+	8500 6150 8500 5350
+Wire Notes Line
+	8850 5350 8850 6150
+Wire Notes Line
+	8850 6150 10800 6150
+Wire Notes Line
+	10800 6150 10800 5350
+Wire Notes Line
+	10800 5350 8850 5350
+Wire Notes Line
+	6550 5350 6550 6150
+Wire Notes Line
+	8500 5350 6550 5350
+Wire Notes Line
+	6550 6150 8500 6150
+Wire Notes Line
+	6500 3900 5100 3900
+Wire Notes Line
+	6500 4450 6500 3900
+Wire Notes Line
+	5100 4450 6500 4450
+Wire Notes Line
+	5100 3900 5100 4450
+Connection ~ 5700 4150
+Wire Wire Line
+	5700 4150 5200 4150
+Text GLabel 5700 4050 0    50   Input ~ 0
+VIN
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 609DAB04
+P 5700 4150
+F 0 "#FLG0102" H 5700 4225 50  0001 C CNN
+F 1 "PWR_FLAG" H 5700 4323 50  0000 C CNN
+F 2 "" H 5700 4150 50  0001 C CNN
+F 3 "~" H 5700 4150 50  0001 C CNN
+	1    5700 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 60925E2F
+P 5900 4050
+F 0 "J1" H 6150 3950 50  0000 C CNN
+F 1 "Conn_01x02" H 6200 4050 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5900 4050 50  0001 C CNN
+F 3 "~" H 5900 4050 50  0001 C CNN
+	1    5900 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 60926472
+P 5200 4150
+F 0 "#PWR03" H 5200 3900 50  0001 C CNN
+F 1 "GND" H 5205 3977 50  0000 C CNN
+F 2 "" H 5200 4150 50  0001 C CNN
+F 3 "" H 5200 4150 50  0001 C CNN
+	1    5200 4150
+	1    0    0    -1  
+$EndComp
+Text Notes 5100 3850 0    50   ~ 0
+8V-28V Input
+Text Notes 6550 5300 0    50   ~ 0
+12V Output
+Text Notes 8850 5300 0    50   ~ 0
+5V Output
+$EndSCHEMATC
