@@ -9,8 +9,8 @@ Date "2021-05-05"
 Rev "v.1"
 Comp "On-Prem"
 Comment1 "Author: aw"
-Comment2 "Url: https://github.com/aw/hw-24v-buck-converter.git"
-Comment3 "License: CC BY-NC-SA 4.0"
+Comment2 "Url: https://github.com/aw/hw-micropow"
+Comment3 "License: CC BY-SA 4.0"
 Comment4 ""
 $EndDescr
 $Comp

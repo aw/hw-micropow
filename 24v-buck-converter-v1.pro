@@ -1,4 +1,4 @@
-update=Thu 05 Aug 2021 01:23:06 PM JST
+update=Tue 10 Aug 2021 12:25:32 PM JST
 version=1
 last_client=kicad
 [general]
