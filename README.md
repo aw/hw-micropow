@@ -17,7 +17,7 @@ The output voltages are accessible on the right side of the PCB and can be used 
 
   * Form factor 44mm x 22mm
   * PCB traces are 1mm and should handle at least 1.5A of current
-  * Open Source Hardware under [CC BY-NC-SA 4.0](#License)
+  * Open Source Hardware under [CC BY-SA 4.0](#License)
   * On-board (SMD) capacitors, fuses, and diodes
   * Simple passive design draws 0mA current when no devices are connected
   * Thermal vias in strategic locations
@@ -52,4 +52,4 @@ I take no responsibility for any problems that may occur with your use of this P
 
 # License
 
-μPow: 3D printer buck converter for 12V/5V fans © 2021 by [Alexander Williams](https://a1w.ca/) is licensed under [_CC BY-NC-SA 4.0_ (Attribution-NonCommercial-ShareAlike 4.0 International)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+μPow: 3D printer buck converter for 12V/5V fans © 2021 by [Alexander Williams](https://a1w.ca/) is licensed under [_CC BY-SA 4.0_ (Attribution-ShareAlike 4.0 International)](https://creativecommons.org/licenses/by-sa/4.0/).
