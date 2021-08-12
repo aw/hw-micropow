@@ -28,11 +28,11 @@ The output voltages are accessible on the right side of the PCB and can be used 
 
 # BOM (through-hole)
 
-| Quantity | Item and Description |
-| :----: | :---- |
-| 1 | XPPower VR10S05 SIP3 5V 500mA DC-DC switching regulator |
-| 1 | XPPower VR10S12 SIP3 12V 500mA DC-DC switching regulator |
-| 3 | 3-pin JST-XH male connectors |
+| Quantity | Item and Description | Datasheet |
+| :----: | :---- | :---- |
+| 1 | XPPower VR10S05 SIP3 5V 1A DC-DC switching regulator | [XPPower-VR10-1A-voltage-regulator.pdf](datasheets/XPPower-VR10S05-5V-1A-voltage-regulator.pdf) |
+| 1 | XPPower VR10S12 SIP3 12V 1A DC-DC switching regulator | [XPPower-VR10-1A-voltage-regulator.pdf](datasheets/XPPower-VR10S05-5V-1A-voltage-regulator.pdf) |
+| 3 | 3-pin JST-XH male connectors | |
 
 # BOM (surface mount)
 
