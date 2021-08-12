@@ -7,6 +7,10 @@ A dual-output switching DC-DC buck converter to replace the 24V fans on a 3D pri
 
 This project is also described in detail [on Hackaday.io](https://hackaday.io/project/179566-pow-3d-printer-buck-converter-for-12v5v-fans)
 
+This project is [certified open hardware](https://certification.oshwa.org/jp000010.html):
+
+[![OSHW_mark_JP000010](https://user-images.githubusercontent.com/153401/129276256-2371ccca-7161-45c1-a8f6-f861aa9da215.png)](https://certification.oshwa.org/jp000010.html)
+
 # How it works
 
 The left side of the PCB accepts 8V to 28V DC input. It then converts the input voltage to 12V and then to 5V.
